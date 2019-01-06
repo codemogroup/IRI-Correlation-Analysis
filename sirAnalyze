@@ -1,0 +1,17 @@
+
+import  json
+
+
+array1 =None
+with open("iroadsData/sir.json") as data_file:
+    array1 = json.load(data_file)
+
+lat = []
+lon =[]
+for item in array1:
+    lat.append(item["lat"])
+    lon.append(item["lon"])
+
+print(len(set(lat)))
+
+print(len(set(lon)))
